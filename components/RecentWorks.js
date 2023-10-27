@@ -12,8 +12,7 @@ import {
 } from "react-native";
 
 import { useState } from "react";
-import Home from "./Home";
-import App from "../App";
+
 import Dummy from "./Dummy";
 
 function RecentWorks() {
@@ -38,12 +37,12 @@ function RecentWorks() {
           />
           <View style={styles.card}>
             <Text style={styles.cardTitle}>Cattle Farming</Text>
-            <Text style={styles.cardText}>
+            {/* <Text style={styles.cardText}>
               Cattle farming involves rearing and management of two types of
               animals- one group for food requirements like milk and another for
               labour purposes like ploughing, irrigation, etc. Animals which
               provide milk are called milch/dairy animals.
-            </Text>
+            </Text> */}
             <View style={styles.cardPicContainer}>
               <Image
                 style={styles.cardPic}
