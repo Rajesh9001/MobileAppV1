@@ -118,7 +118,9 @@ const Contact = () => {
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.buttonStyle}
-          onPress={() => Communications.web("https://aboutreact.com")}
+          onPress={() =>
+            Communications.web("https://www.youtube.com/@dairyfarmaing677")
+          }
         >
           <MaterialCommunityIcons name="youtube" size={30} color={"#c02710"} />
         </TouchableOpacity>

@@ -179,11 +179,11 @@ export default function Welcome() {
     <ScrollView style={styles.container}>
       <View>
         <Text style={[styles.highlight]}> VETERINARY </Text>
-        <Text style={{ color: "black" }}>name is {context.name}</Text>
+        {/* <Text style={{ color: "black" }}>name is {context.name}</Text>
         <Button title="yes" onPress={click}>
           yes
-        </Button>
-        <Text>{context.phoneNumber}</Text>
+        </Button> */}
+        {/* <Text>{context.phoneNumber}</Text> */}
       </View>
       <View>
         <View>

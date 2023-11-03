@@ -13,56 +13,53 @@ import {
   Image,
 } from "react-native";
 
-const diesasesList = [
+const SahiwalList = [
   {
     id: 1,
-    img: require("../../assets/images/diesases1.jpeg"),
+    img: require("../../assets/images/Sahiwal1.jpeg"),
     description: "",
   },
   {
     id: 2,
-    img: require("../../assets/images/diesases2.jpeg"),
+    img: require("../../assets/images/Sahiwal2.jpeg"),
     description: "",
   },
   {
     id: 3,
-    img: require("../../assets/images/diesases3.jpeg"),
+    img: require("../../assets/images/Sahiwal3.jpeg"),
     description: "",
   },
   {
     id: 4,
-    img: require("../../assets/images/diesases7.jpeg"),
+    img: require("../../assets/images/Sahiwal4.jpeg"),
     description: "",
   },
   {
     id: 5,
-    img: require("../../assets/images/diesases5.jpeg"),
+    img: require("../../assets/images/Sahiwal5.jpeg"),
     description: "",
   },
   {
     id: 6,
-    img: require("../../assets/images/diesases6.jpeg"),
+    img: require("../../assets/images/Sahiwal6.jpeg"),
     description: "",
   },
   {
     id: 7,
-    img: require("../../assets/images/diesases4.jpeg"),
+    img: require("../../assets/images/Sahiwal7.jpeg"),
+    description: "",
+  },
+  {
+    id: 8,
+    img: require("../../assets/images/Sahiwal8.jpeg"),
     description: "",
   },
 ];
 
-export default function Diseases({ navigation }) {
+export default function SahiwalCalves({ navigation }) {
   return (
-    // <ScrollView
-    //   // nestedScrollEnabled={true}
-    //   // stickyHeaderIndices={[0]}
-    //   showsVerticalScrollIndicator={false}
-    //   // style={styles.container}
-    //   // horizontal={true}
-    //   // vertical={true}
-    // >
     <View style={styles.screen}>
-      <Text
+      {/* <Text
         style={{
           color: "#9a0202",
           fontSize: 18,
@@ -70,8 +67,8 @@ export default function Diseases({ navigation }) {
           marginTop: 16,
         }}
       >
-        Diseases
-      </Text>
+        Sahiwal
+      </Text> */}
       <Text
         style={{
           textAlign: "center",
@@ -80,18 +77,22 @@ export default function Diseases({ navigation }) {
           fontWeight: "500",
         }}
       >
-        The Diseases of dairy cattle are bacterial, viral, parasitic etc. The
-        following pictures are occurrence of Foot and Mouth Diseases in Dairy
-        Cattle.
+        <Text style={{ color: "#6c0606", fontSize: 16, fontWeight: "600" }}>
+          Sahiwal{" "}
+        </Text>
+        is a breed of Zebu cattle which primarily is used in dairy production.
+        Sahiwal originated from the Sahiwal district of Punjab province in
+        Pakistan. Good Management of Sahiwal calves at LPM Department, College
+        of Veterinary College Tirupati.
       </Text>
       <FlatList
-        data={diesasesList}
+        data={SahiwalList}
         numColumns={width > 400 ? 2 : 1}
         renderItem={({ item }) => (
           <View style={{ alignItems: "center" }}>
-            {/* <View style={styles.imageHeader}>
+            <View style={styles.imageHeader}>
               <Text style={styles.imageName}>{item.description}</Text>
-            </View> */}
+            </View>
             <View
               style={[
                 styles.imageContainer,
@@ -110,7 +111,6 @@ export default function Diseases({ navigation }) {
         keyExtractor={(item) => item.id}
       />
     </View>
-    // </ScrollView>
   );
 }
 const styles = StyleSheet.create({
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 4,
     overflow: Platform.OS === "android" ? "hidden" : "visible",
-    shadowColor: "#c12299",
+    shadowColor: "black",
     shadowOpacity: 0.35,
     shadowOffset: { width: 2, height: 4 },
     shadowRadius: 4,

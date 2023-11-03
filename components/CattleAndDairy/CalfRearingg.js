@@ -13,45 +13,93 @@ import {
   Image,
 } from "react-native";
 
-const diesasesList = [
+const RearingList = [
   {
     id: 1,
-    img: require("../../assets/images/diesases1.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing1.jpeg"),
+    description: "Graded Murrah buffaloe with new born calf",
   },
   {
     id: 2,
-    img: require("../../assets/images/diesases2.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing2.jpeg"),
+    description: "New born buffaloe calves",
   },
   {
     id: 3,
-    img: require("../../assets/images/diesases3.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing3.jpeg"),
+    description: "Colostrum feeding of new born calf",
   },
   {
     id: 4,
-    img: require("../../assets/images/diesases7.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing4.jpeg"),
+    description: "Protection of calves in winter with paddy straw bedding",
   },
   {
     id: 5,
-    img: require("../../assets/images/diesases5.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing5.jpeg"),
+    description: "Identification of calves",
   },
   {
     id: 6,
-    img: require("../../assets/images/diesases6.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing6.jpeg"),
+    description: "Adequate ventilation",
   },
   {
     id: 7,
-    img: require("../../assets/images/diesases4.jpeg"),
-    description: "",
+    img: require("../../assets/images/Rearing7.jpeg"),
+    description: "Adequate space for exercising calves",
+  },
+  {
+    id: 8,
+    img: require("../../assets/images/Rearing8.jpeg"),
+    description: "Grooming of calves",
+  },
+
+  {
+    id: 10,
+    img: require("../../assets/images/Rearing9.jpeg"),
+    description: "Shiny hair coat",
+  },
+  {
+    id: 11,
+    img: require("../../assets/images/Rearing10.jpeg"),
+    description: "Daily cleaning of calves yard.",
+  },
+
+  {
+    id: 12,
+    img: require("../../assets/images/Rearing11.jpeg"),
+    description: "Feeding chaffed greens",
+  },
+  {
+    id: 13,
+    img: require("../../assets/images/Rearing12.jpeg"),
+    description: "Protected Railing for feed manager",
+  },
+  {
+    id: 14,
+    img: require("../../assets/images/Rearing13.jpeg"),
+    description: "Grouping of same aged calves",
+  },
+  {
+    id: 15,
+    img: require("../../assets/images/Rearing14.jpeg"),
+    description: "Brick flooring in calves shed",
+  },
+
+  {
+    id: 16,
+    img: require("../../assets/images/Rearing15.jpeg"),
+    description: "Healthy Hariana calves",
+  },
+  {
+    id: 17,
+    img: require("../../assets/images/Rearing16.jpeg"),
+    description: "Hygienic calf Yard",
   },
 ];
 
-export default function Diseases({ navigation }) {
+export default function CalfRearingg({ navigation }) {
   return (
     // <ScrollView
     //   // nestedScrollEnabled={true}
@@ -62,7 +110,7 @@ export default function Diseases({ navigation }) {
     //   // vertical={true}
     // >
     <View style={styles.screen}>
-      <Text
+      {/* <Text
         style={{
           color: "#9a0202",
           fontSize: 18,
@@ -70,8 +118,8 @@ export default function Diseases({ navigation }) {
           marginTop: 16,
         }}
       >
-        Diseases
-      </Text>
+        Rearing
+      </Text> */}
       <Text
         style={{
           textAlign: "center",
@@ -80,18 +128,23 @@ export default function Diseases({ navigation }) {
           fontWeight: "500",
         }}
       >
-        The Diseases of dairy cattle are bacterial, viral, parasitic etc. The
-        following pictures are occurrence of Foot and Mouth Diseases in Dairy
-        Cattle.
+        <Text style={{ color: "#6d0505", fontSize: 15, fontWeight: "600" }}>
+          Calf rearing good practice.{" "}
+        </Text>
+        All calves, including bobbies, must receive adequate fresh colostrum
+        within the first 24 hours of life and should be fed colostrum, or a
+        colostrum substitute, for at least the first four days of life. Always
+        handle calves gently and with care. Do not allow anyone to throw, hit or
+        drag a calf at any time.
       </Text>
       <FlatList
-        data={diesasesList}
+        data={RearingList}
         numColumns={width > 400 ? 2 : 1}
         renderItem={({ item }) => (
           <View style={{ alignItems: "center" }}>
-            {/* <View style={styles.imageHeader}>
+            <View style={styles.imageHeader}>
               <Text style={styles.imageName}>{item.description}</Text>
-            </View> */}
+            </View>
             <View
               style={[
                 styles.imageContainer,
@@ -141,7 +194,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 4,
     overflow: Platform.OS === "android" ? "hidden" : "visible",
-    shadowColor: "#c12299",
+    shadowColor: "black",
     shadowOpacity: 0.35,
     shadowOffset: { width: 2, height: 4 },
     shadowRadius: 4,

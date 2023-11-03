@@ -43,8 +43,8 @@ export default function Animals({ navigation }) {
   const context = useContext(Context);
   return (
     <SafeAreaView style={styles.screen}>
-      <Text>Hiii {context.city} Hiii</Text>
-      <Text>{context.phoneNumber}</Text>
+      {/* <Text>Hiii {context.city} Hiii</Text>
+      <Text>{context.phoneNumber}</Text> */}
       <FlatList
         data={emuList}
         renderItem={({ item }) => (

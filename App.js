@@ -30,6 +30,8 @@ import HeatDetection from "./components/CattleAndDairy/HeatDetection";
 import Housing from "./components/CattleAndDairy/Housing";
 import Feeding from "./components/CattleAndDairy/Feeding";
 import CalfRearing from "./components/CattleAndDairy/CalfRearing";
+import CalfRearingg from "./components/CattleAndDairy/CalfRearingg";
+import SahiwalCalves from "./components/CattleAndDairy/SahiwalCalves";
 import CleanMilkProduction from "./components/CattleAndDairy/CleanMilkProduction";
 import Diseases from "./components/CattleAndDairy/Diseases";
 import OrganicDairy from "./components/CattleAndDairy/OrganicDairy";
@@ -197,6 +199,20 @@ export default function App() {
               component={CalfRearing}
               options={{
                 title: "",
+              }}
+            />
+            <Stack.Screen
+              name="CalfRearingg"
+              component={CalfRearingg}
+              options={{
+                title: "Calf Rearing",
+              }}
+            />
+            <Stack.Screen
+              name="SahiwalCalves"
+              component={SahiwalCalves}
+              options={{
+                title: "Sahiwal Calves",
               }}
             />
             <Stack.Screen

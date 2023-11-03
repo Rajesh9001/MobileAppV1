@@ -49,6 +49,71 @@ const heritageList = [
     img: require("../../assets/images/heritage7.jpeg"),
     description: "",
   },
+  {
+    id: 8,
+    img: require("../../assets/images/heritage8.jpeg"),
+    description: "",
+  },
+  {
+    id: 9,
+    img: require("../../assets/images/heritage9.jpeg"),
+    description: "",
+  },
+  {
+    id: 10,
+    img: require("../../assets/images/heritage10.jpeg"),
+    description: "",
+  },
+  {
+    id: 11,
+    img: require("../../assets/images/heritage11.jpeg"),
+    description: "",
+  },
+  {
+    id: 12,
+    img: require("../../assets/images/heritage12.jpeg"),
+    description: "",
+  },
+  {
+    id: 13,
+    img: require("../../assets/images/heritage13.jpeg"),
+    description: "",
+  },
+  {
+    id: 14,
+    img: require("../../assets/images/heritage14.jpeg"),
+    description: "",
+  },
+  {
+    id: 15,
+    img: require("../../assets/images/heritage15.jpeg"),
+    description: "",
+  },
+  {
+    id: 16,
+    img: require("../../assets/images/heritage16.jpeg"),
+    description: "",
+  },
+  {
+    id: 17,
+    img: require("../../assets/images/heritage17.jpeg"),
+    description: "",
+  },
+  {
+    id: 18,
+    img: require("../../assets/images/heritage18.jpeg"),
+    description: "",
+  },
+  {
+    id: 19,
+    img: require("../../assets/images/heritage19.jpeg"),
+    description: "",
+  },
+  {
+    id: 20,
+    img: require("../../assets/images/heritage20.jpeg"),
+    description: "",
+  },
 ];
 
 export default function IndianHeritage({ navigation }) {

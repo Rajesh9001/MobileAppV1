@@ -41,7 +41,7 @@ const HousingList = [
   },
   {
     id: 6,
-    img: require("../../assets/images/Housing6.jpeg"),
+    img: require("../../assets/images/housing13.jpeg"),
     description: "Chequered flooring to prevent slipping of animals",
   },
   {

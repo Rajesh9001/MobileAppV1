@@ -244,7 +244,7 @@ function MyDrawer() {
             drawerActiveTintColor: "#351401",
           }}
         />
-        <Drawer.Screen
+        {/* <Drawer.Screen
           name="Download"
           component={Download}
           options={{
@@ -256,7 +256,7 @@ function MyDrawer() {
             title: "Contact Us",
             drawerActiveTintColor: "#351401",
           }}
-        />
+        /> */}
       </Drawer.Navigator>
     </ContextProvider>
   );
