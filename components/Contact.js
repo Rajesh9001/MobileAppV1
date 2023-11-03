@@ -127,28 +127,30 @@ const Contact = () => {
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.buttonStyle}
-          onPress={() => Communications.web("https://aboutreact.com")}
+          onPress={() => Communications.web("https://instagram.com")}
         >
           <Entypo name="instagram" size={23} color={"#9f0297"} />
         </TouchableOpacity>
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.buttonStyle}
-          onPress={() => Communications.web("https://aboutreact.com")}
+          onPress={() =>
+            Communications.web("https://holisticanimalfarming.com/")
+          }
         >
           <MaterialCommunityIcons name="web" size={27} color={"#444343"} />
         </TouchableOpacity>
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.buttonStyle}
-          onPress={() => Communications.web("https://aboutreact.com")}
+          onPress={() => Communications.web("https://twitter.com")}
         >
           <Entypo name="twitter" size={25} color={"#12608a"} />
         </TouchableOpacity>
         <TouchableOpacity
           activeOpacity={0.7}
           style={styles.buttonStyle}
-          onPress={() => Communications.web("https://aboutreact.com")}
+          onPress={() => Communications.web("https://facebook.com")}
         >
           <Entypo name="facebook" size={24} color={"#085a86"} />
         </TouchableOpacity>
