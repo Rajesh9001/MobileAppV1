@@ -121,15 +121,7 @@ function MyDrawer() {
             ),
           }}
         />
-        <Drawer.Screen
-          name="Publication"
-          component={Publication}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="book-sharp" size={20} color={color} />
-            ),
-          }}
-        />
+
         <Drawer.Screen
           name="Research Areas"
           component={ResearchAreas}
@@ -215,6 +207,15 @@ function MyDrawer() {
           options={{
             drawerIcon: ({ color, size }) => (
               <FontAwesome5 name="hands-helping" size={18} color={color} />
+            ),
+          }}
+        />
+        <Drawer.Screen
+          name="Publication"
+          component={Publication}
+          options={{
+            drawerIcon: ({ color, size }) => (
+              <Ionicons name="book-sharp" size={20} color={color} />
             ),
           }}
         />

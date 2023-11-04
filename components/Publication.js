@@ -2,7 +2,9 @@ import { Text } from "react-native";
 
 function Publication({ navigation }) {
   return (
-    <Text onPress={() => navigation.navigate("Publication")}>Publication</Text>
+    <Text style={{ textAlign: "center", paddingTop: 20 }}>
+      Publications will be uploaded soon
+    </Text>
   );
 }
 

@@ -128,7 +128,7 @@ export default function CalfRearingg({ navigation }) {
           fontWeight: "500",
         }}
       >
-        <Text style={{ color: "#6d0505", fontSize: 15, fontWeight: "600" }}>
+        <Text style={{ color: "#950202", fontSize: 16, fontWeight: "600" }}>
           Calf rearing good practice.{" "}
         </Text>
         All calves, including bobbies, must receive adequate fresh colostrum

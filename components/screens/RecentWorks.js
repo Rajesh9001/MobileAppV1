@@ -30,7 +30,7 @@ function RecentWorks() {
             style={styles.image}
             source={require("../../assets/images/a.png")}
           />
-          <View style={styles.card}>
+          {/* <View style={styles.card}>
             <Text style={styles.cardTitle}>Cattle Farming</Text>
             <Text style={styles.cardText}>
               Cattle farming involves rearing and management of two types of
@@ -44,7 +44,7 @@ function RecentWorks() {
                 source={require("../../assets/images/calf1.png")}
               />
             </View>
-          </View>
+          </View> */}
           <View style={styles.card}>
             <Text style={styles.cardTitle}>
               Sankara jaati pashuvula yajamanyam
@@ -170,7 +170,7 @@ function RecentWorks() {
           </View>
 
           {/* <Text>{name}</Text> */}
-          <TextInput
+          {/* <TextInput
             style={styles.textInput}
             placeholder="Your course goal!"
             // onChangeText={goalInputHandler}
@@ -187,7 +187,7 @@ function RecentWorks() {
                 color="#6822c4"
               />
             </View>
-          </View>
+          </View> */}
         </View>
       </ScrollView>
     </View>
@@ -198,7 +198,7 @@ export default RecentWorks;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    marginBottom: "15%",
+    marginBottom: "2%",
   },
   inputContainer: {
     justifyContent: "center",
@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     marginTop: 5,
-    fontSize: 18,
+    fontSize: 16,
     // fontWeight: "bold",
     textAlign: "center",
     paddingTop: 5,

@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   widget: {
-    backgroundColor: "#90c7ee",
+    backgroundColor: "#a1ceee",
     marginHorizontal: 25,
     marginBottom: 25,
     padding: 20,

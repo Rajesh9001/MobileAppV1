@@ -88,14 +88,6 @@ export default function FeedingProduction({ navigation }) {
     []
   );
   return (
-    // <ScrollView
-    //   // nestedScrollEnabled={true}
-    //   // stickyHeaderIndices={[0]}
-    //   showsVerticalScrollIndicator={false}
-    //   // style={styles.container}
-    //   // horizontal={true}
-    //   // vertical={true}
-    // >
     <View style={styles.screen}>
       <Text
         style={{
@@ -133,7 +125,6 @@ export default function FeedingProduction({ navigation }) {
         keyExtractor={(item) => String(item.id)}
       />
     </View>
-    // </ScrollView>
   );
 }
 const styles = StyleSheet.create({

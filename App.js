@@ -32,6 +32,8 @@ import Feeding from "./components/CattleAndDairy/Feeding";
 import CalfRearing from "./components/CattleAndDairy/CalfRearing";
 import CalfRearingg from "./components/CattleAndDairy/CalfRearingg";
 import SahiwalCalves from "./components/CattleAndDairy/SahiwalCalves";
+import IntegratedFarming from "./components/IntegratedFarming";
+import PfizerDrug from "./components/PfizerDrug";
 import CleanMilkProduction from "./components/CattleAndDairy/CleanMilkProduction";
 import Diseases from "./components/CattleAndDairy/Diseases";
 import OrganicDairy from "./components/CattleAndDairy/OrganicDairy";
@@ -213,6 +215,20 @@ export default function App() {
               component={SahiwalCalves}
               options={{
                 title: "Sahiwal Calves",
+              }}
+            />
+            <Stack.Screen
+              name="IntegratedFarming"
+              component={IntegratedFarming}
+              options={{
+                title: "Integrated Farming",
+              }}
+            />
+            <Stack.Screen
+              name="PfizerDrug"
+              component={PfizerDrug}
+              options={{
+                title: "Pfizer Drug",
               }}
             />
             <Stack.Screen
