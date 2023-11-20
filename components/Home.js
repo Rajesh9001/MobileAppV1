@@ -43,7 +43,7 @@ function Home({ visible, name, onCancel }) {
     //   </Drawer.Navigator> */}
     //   <LinearGradient colors={["#5c56a4da", "#87d3238a", "#3773a8bd"]}>
     //     <ImageBackground
-    //       source={require("../assets/images/calf2.png")}
+    //       source={require("../assets/images/calf2.jpg")}
     //       resizeMode="cover"
     //       imageStyle={styles.backgroundImage}
     //     >

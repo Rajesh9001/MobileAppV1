@@ -5,10 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "plugins": [
-      "@config-plugins/react-native-blob-util",
-      "@config-plugins/react-native-pdf"
-    ],
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",

@@ -28,7 +28,7 @@ function RecentWorks() {
         <View style={styles.inputContainer}>
           <Image
             style={styles.image}
-            source={require("../../assets/images/a.png")}
+            source={require("../../assets/images/a.jpg")}
           />
           {/* <View style={styles.card}>
             <Text style={styles.cardTitle}>Cattle Farming</Text>
@@ -41,7 +41,7 @@ function RecentWorks() {
             <View style={styles.cardPicContainer}>
               <Image
                 style={styles.cardPic}
-                source={require("../../assets/images/calf1.png")}
+                source={require("../../assets/images/calf1.jpg")}
               />
             </View>
           </View> */}

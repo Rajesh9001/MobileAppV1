@@ -21,7 +21,7 @@ import Press from "../ui/Press";
 const emuList = [
   {
     id: 1,
-    img: require("../assets/images/calf1.png"),
+    img: require("../assets/images/calf1.jpg"),
     description: "Dairy | Cattle",
     page: "CattleList",
   },
@@ -33,7 +33,7 @@ const emuList = [
   },
   {
     id: 3,
-    img: require("../assets/images/sheep.png"),
+    img: require("../assets/images/sheep.jpg"),
     description: "Sheep",
     page: "Sheep",
   },

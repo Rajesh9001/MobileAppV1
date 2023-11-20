@@ -10,7 +10,7 @@ function AboutUs() {
         <View style={styles.imagecontainer}>
           <Image
             style={styles.image}
-            source={require("../assets/images/a.png")}
+            source={require("../assets/images/a.jpg")}
           />
         </View>
       </View>

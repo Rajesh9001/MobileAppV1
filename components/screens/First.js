@@ -78,7 +78,7 @@ function First({ navigation }) {
       style={styles.rootScreen}
     >
       <ImageBackground
-        source={require("../../assets/images/calf2.png")}
+        source={require("../../assets/images/calf2.jpg")}
         style={styles.rootScreen}
         resizeMode="cover"
         imageStyle={styles.backgroundImage}

@@ -34,11 +34,11 @@ import { useEffect } from "react";
 import { Dimensions } from "react-native";
 
 const images = [
-  require("../../assets/images/cowAndCalf.png"),
-  require("../../assets/images/cattle.png"),
-  require("../../assets/images/Emu3.png"),
-  require("../../assets/images/sheep1.png"),
-  require("../../assets/images/calf1.png"),
+  require("../../assets/images/cowAndCalf.jpg"),
+  require("../../assets/images/cattle.jpg"),
+  require("../../assets/images/Emu3.jpg"),
+  require("../../assets/images/sheep1.jpg"),
+  require("../../assets/images/calf1.jpg"),
   // "https://source.unsplash.com/1024x768/?nature",
   // "https://source.unsplash.com/1024x768/?water",
   // "https://source.unsplash.com/1024x768/?tree",
@@ -66,19 +66,19 @@ const images = [
 
 const data = [
   {
-    img: require("../../assets/images/cowAndCalf.png"),
+    img: require("../../assets/images/cowAndCalf.jpg"),
   },
   {
-    img: require("../../assets/images/cattle.png"),
+    img: require("../../assets/images/cattle.jpg"),
   },
   {
-    img: require("../../assets/images/Emu3.png"),
+    img: require("../../assets/images/Emu3.jpg"),
   },
   {
-    img: require("../../assets/images/sheep1.png"),
+    img: require("../../assets/images/sheep1.jpg"),
   },
   {
-    img: require("../../assets/images/calf1.png"),
+    img: require("../../assets/images/calf1.jpg"),
   },
 ];
 
