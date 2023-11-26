@@ -32,6 +32,7 @@ import {
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { Dimensions } from "react-native";
+import { AuthContext } from "../../store/auth-context";
 
 const images = [
   require("../../assets/images/cowAndCalf.jpg"),
@@ -66,19 +67,19 @@ const images = [
 
 const data = [
   {
-    img: require("../../assets/images/cowAndCalf.jpg"),
+    img: require("../../assets/images/a1.jpg"),
   },
   {
-    img: require("../../assets/images/cattle.jpg"),
+    img: require("../../assets/images/a2.jpg"),
   },
   {
-    img: require("../../assets/images/Emu3.jpg"),
+    img: require("../../assets/images/a3.jpg"),
   },
   {
-    img: require("../../assets/images/sheep1.jpg"),
+    img: require("../../assets/images/a4.jpg"),
   },
   {
-    img: require("../../assets/images/calf1.jpg"),
+    img: require("../../assets/images/a5.jpg"),
   },
 ];
 
@@ -154,7 +155,7 @@ export default function Welcome() {
   });
   // const { name, phoneNumber, setName } = useContext(Context);
   const context = useContext(Context);
-
+  const authCtx = useContext(AuthContext);
   // const { name, phoneNumber, city } = context;
 
   useEffect(() => {
@@ -179,8 +180,8 @@ export default function Welcome() {
     <ScrollView style={styles.container}>
       <View>
         <Text style={[styles.highlight]}> VETERINARY </Text>
-        {/* <Text style={{ color: "black" }}>name is {context.name}</Text>
-        <Button title="yes" onPress={click}>
+        {/* <Text style={{ color: "black" }}>name is {authCtx.otpLoginName}</Text> */}
+        {/* <Button title="yes" onPress={click}>
           yes
         </Button> */}
         {/* <Text>{context.phoneNumber}</Text> */}
@@ -196,26 +197,49 @@ export default function Welcome() {
           </Text>
         </View>
       </View>
-      <ImageSlider
-        localImg={true}
-        data={data}
-        autoPlay
-        closeIconColor="#fff"
-        previewImageContainerStyle={{ padding: 20 }}
-        // previewImageStyle={{
-        //   width: 90,
-        // }}
-        caroselImageContainerStyle={{ padding: 20 }}
-        caroselImageStyle={{
-          resizeMode: "cover",
-          height: 220,
+
+      <View
+        style={{
+          // width: "95%",
+          //  padding: "5%",
+          // paddingTop: 0,
           borderRadius: 15,
-          width: Platform.OS === "android" ? 310 : 350,
+          // elevation: 4,
+          margin: 20,
+          marginLeft: 0,
+          overflow: Platform.OS === "android" ? "hidden" : "visible",
         }}
-        activeIndicatorStyle={{ height: 6, width: 20, backgroundColor: "grey" }}
-        inActiveIndicatorStyle={{ height: 9, width: 9 }}
-        indicatorContainerStyle={{ marginBottom: -15 }}
-      />
+      >
+        <ImageSlider
+          localImg={true}
+          data={data}
+          autoPlay
+          closeIconColor="#fff"
+          // previewImageContainerStyle={{ padding: 20 }}
+          // previewImageStyle={{
+          //   width: 90,
+          // }}
+          caroselImageContainerStyle={{
+            paddingHorizontal: 25,
+            // margin: 10s,
+            // backgroundColor: "blue",
+            // width: "50%",
+          }}
+          caroselImageStyle={{
+            resizeMode: "cover",
+            height: 220,
+            width: 360,
+            borderRadius: 15,
+          }}
+          activeIndicatorStyle={{
+            height: 6,
+            width: 20,
+            backgroundColor: "grey",
+          }}
+          inActiveIndicatorStyle={{ height: 9, width: 9 }}
+          indicatorContainerStyle={{ marginBottom: -15 }}
+        />
+      </View>
 
       {/* <SliderBox
         images={images}
@@ -323,6 +347,7 @@ export default function Welcome() {
           circleLoop
           dotColor="#fd7d06eb"
         /> */}
+
         <ImageSlider
           localImg={true}
           data={quotes}

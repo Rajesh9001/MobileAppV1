@@ -1,6 +1,6 @@
 import { Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window");
 import { ScrollView } from "react-native-virtualized-view";
+const { width, height } = Dimensions.get("window");
 
 import React from "react";
 import {
@@ -13,65 +13,63 @@ import {
   Image,
 } from "react-native";
 
-const HydrophonicsList = [
+const pfizerList = [
   {
     id: 1,
-    img: require("../../assets/images/Hydroponics1.jpeg"),
-    description: "Various Stages of Hydroponic Grass Production",
+    img: require("../assets/images/pfizer1.jpeg"),
+    description: "Experimental Shed",
   },
   {
     id: 2,
-    img: require("../../assets/images/Hydroponics2.jpeg"),
-    description: "sprouted maize grain",
+    img: require("../assets/images/pfizer2.jpeg"),
+    description: "Selection of animals",
   },
   {
     id: 3,
-    img: require("../../assets/images/Hydroponics3.jpeg"),
-    description: "sprouted maize grass in trays",
+    img: require("../assets/images/pfizer3.jpeg"),
+    description: "Identification of animals",
   },
   {
     id: 4,
-    img: require("../../assets/images/Hydroponics4.jpeg"),
-    description: "Hydrophonic grass trays in rows",
+    img: require("../assets/images/pfizer4.jpeg"),
+    description: "Identification of animals",
   },
   {
     id: 5,
-    img: require("../../assets/images/Hydroponics5.jpeg"),
-    description: "Rady to eat hydrophonic maize grass",
+    img: require("../assets/images/pfizer5.jpeg"),
+    description: "Pouring of drug on animals",
   },
   {
     id: 6,
-    img: require("../../assets/images/Hydroponics6.jpeg"),
-    description: "Shaded wet covering hydrophonic maize production",
+    img: require("../assets/images/pfizer6.jpeg"),
+    description: "Treatment of animals",
   },
   {
     id: 7,
-    img: require("../../assets/images/Hydroponics7.jpeg"),
-    description: "Shaded wet covering hydrophonic maize production",
+    img: require("../assets/images/pfizer7.jpeg"),
+    description: "Treatment of animals",
+  },
+  {
+    id: 8,
+    img: require("../assets/images/pfizer8.jpeg"),
+    description: "Treatment of animals",
   },
 ];
 
-export default function Hydrophonics({ navigation }) {
+export default function PfizerDrug({ navigation }) {
   return (
-    <ScrollView
-      // nestedScrollEnabled={true}
-      //   stickyHeaderIndices={[0][1]}
-      showsVerticalScrollIndicator={false}
-      // style={styles.container}
-      // horizontal={true}
-      // vertical={true}
-    >
+    <ScrollView>
       <View style={styles.screen}>
-        <Text
-          style={{
-            color: "#9a0202",
-            fontSize: 18,
-            fontWeight: "bold",
-            marginTop: 15,
-          }}
-        >
-          Hydrophonics Technologies
-        </Text>
+        {/* <Text
+        style={{
+          color: "#9a0202",
+          fontSize: 18,
+          fontWeight: "bold",
+          marginTop: 16,
+        }}
+      >
+        Pfizer 
+      </Text> */}
         <Text
           style={{
             textAlign: "center",
@@ -80,20 +78,24 @@ export default function Hydrophonics({ navigation }) {
             fontWeight: "500",
           }}
         >
-          <Text style={{ color: "#0a0505", fontSize: 16, fontWeight: "700" }}>
-            Hydroponics fodder{" "}
+          <Text style={{ color: "#6c0606", fontSize: 16, fontWeight: "600" }}>
+            The objective{" "}
           </Text>
-          is production of greens with little moisture and nutrients to the
-          growing plants. Hydroponic systems produce a greater yield over a
-          shorter period of time in a smaller area than traditional fodder
-          crops. The technology is mostly useful to the landless and marginal
-          farmers of peri-urban where they have very less space for growing of
-          fodders. The grains that are suitable are cereal grains such as Maize,
-          Barley, Oats, Wheat, Jowar and legumes such as Lucerne, Clover and
-          Cowpea.
+          of this study is to measure the Fipronil residues in bovine milk from
+          lactating dairy cows at various withdrawal times following topical
+          administration of Fipronil @1.0 mg/Kg in order to define the residue
+          depletion profile. Fipronil, an acaricide can be used to prevent,
+          control and treat the tick infestation in the dairy farms.
+          {"\n"} A total of 15 Jersey Sahiwal crossbred cows of second parity in
+          fourth month of lactation cycle of Department of Livestock Production
+          Management, College of Veterinary Science, Tirupati were utilized for
+          the study purpose. No signs of illness or infection especially
+          mastitis and milk sample from the animals will be checked for SCC
+          400,000 in the composite 4-quarter milk sample, prior to start of the
+          study.
         </Text>
         <FlatList
-          data={HydrophonicsList}
+          data={pfizerList}
           //numColumns={width > 400 ? 2 : 1}
           renderItem={({ item }) => (
             <View style={{ alignItems: "center" }}>
@@ -110,7 +112,7 @@ export default function Hydrophonics({ navigation }) {
               >
                 <Image
                   source={item.img}
-                  style={{ width: "100%", height: 180, borderRadius: 5 }}
+                  style={{ width: "100%", height: 190, borderRadius: 5 }}
                 />
               </View>
             </View>
@@ -128,7 +130,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     // paddingHorizontal: 200,
-    backgroundColor: "white",
+    backgroundColor: "#cccac8",
   },
 
   imageHeader: {

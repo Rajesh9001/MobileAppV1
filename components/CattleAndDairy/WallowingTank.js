@@ -85,7 +85,7 @@ export default function WallowingTank({ navigation }) {
       </Text>
       <FlatList
         data={wallowingList}
-        numColumns={width > 400 ? 2 : 1}
+        //numColumns={width > 400 ? 2 : 1}
         renderItem={({ item }) => (
           <View style={{ alignItems: "center" }}>
             {/* <View style={styles.imageHeader}>

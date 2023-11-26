@@ -283,8 +283,6 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     borderColor: "#797878",
-    // borderWidth: 1,
-
     elevation: 4,
     borderRadius: 5,
     backgroundColor: "#83bba4c2",

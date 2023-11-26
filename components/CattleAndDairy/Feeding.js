@@ -120,7 +120,7 @@ export default function FeedingProduction({ navigation }) {
       </Text>
       <FlatList
         data={FeedingList}
-        numColumns={width > 400 ? 2 : 1}
+        //numColumns={width > 400 ? 2 : 1}
         renderItem={renderItem}
         keyExtractor={(item) => String(item.id)}
       />

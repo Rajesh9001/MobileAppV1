@@ -29,6 +29,7 @@
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.rajeshsirigiri.RNCourse"/>
         <data android:scheme="exp+rncourse"/>
+        <data android:scheme="exp+farmvet"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

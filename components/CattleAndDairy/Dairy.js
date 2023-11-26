@@ -53,93 +53,119 @@ export default function Dairy({ navigation }) {
           small, marginal and landless labours as main / subsidiary occupation
           to agriculture.
         </Text>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+        <View style={{ alignItems: "center", justifyContent: "center" }}>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"7DUi0zRVx5k"}
+              onChangeState={onStateChange}
+            />
           </View>
-          <YoutubePlayer
-            height={210}
-            width={width > 890 ? 400 : 340}
-            play={playing}
-            videoId={"7DUi0zRVx5k"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
-          </View>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            </View>
 
-          <YoutubePlayer
-            height={210}
-            width={width > 390 ? 400 : 340}
-            play={playing}
-            videoId={"CWSzCapfdQ4"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"CWSzCapfdQ4"}
+              onChangeState={onStateChange}
+            />
           </View>
-          <YoutubePlayer
-            height={210}
-            width={width > 390 ? 400 : 300}
-            play={playing}
-            videoId={"xdGBkjelhsI"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"xdGBkjelhsI"}
+              onChangeState={onStateChange}
+            />
           </View>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project </Text>
+            </View>
 
-          <YoutubePlayer
-            height={210}
-            width={width > 390 ? 400 : 300}
-            play={playing}
-            videoId={"po_M9mCumoM"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"po_M9mCumoM"}
+              onChangeState={onStateChange}
+            />
           </View>
-          <YoutubePlayer
-            height={210}
-            width={width > 390 ? 400 : 300}
-            play={playing}
-            videoId={"xbRtlZtf19c"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project </Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"xbRtlZtf19c"}
+              onChangeState={onStateChange}
+            />
           </View>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Dairy Project </Text>
+            </View>
 
-          <YoutubePlayer
-            height={210}
-            width={width > 390 ? 400 : 300}
-            play={playing}
-            videoId={"xMc6ypD6hMo"}
-            onChangeState={onStateChange}
-          />
-        </View>
-        {/* <View style={styles.videoContainer}>
-          <View style={styles.videoHeader}>
-            <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"xMc6ypD6hMo"}
+              onChangeState={onStateChange}
+            />
           </View>
-          <YoutubePlayer
-            height={210}
-            width={width > 400 ? 400 : 300}
-            play={playing}
-            videoId={"MBlgaPguCaQ"}
-            onChangeState={onStateChange}
-          />
-        </View> */}
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>TMR feeding</Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"yB67QrQN9Ns"}
+              onChangeState={onStateChange}
+            />
+          </View>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Organic Farming</Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"RrmcRj6zmd0"}
+              onChangeState={onStateChange}
+            />
+          </View>
+          <View style={styles.videoContainer}>
+            <View style={styles.videoHeader}>
+              <Text style={styles.videoName}>Punganur cattle</Text>
+            </View>
+            <YoutubePlayer
+              height={210}
+              width={300}
+              play={playing}
+              videoId={"C_k-w5KYSQ4"}
+              onChangeState={onStateChange}
+            />
+          </View>
+        </View>
       </ScrollView>
     </>
   );
@@ -160,12 +186,12 @@ const styles = StyleSheet.create({
   },
   videoContainer: {
     backgroundColor: "#928e8e",
-    padding: width < 890 ? 10 : 25,
+    paddingTop: 10,
     height: 260,
     borderRadius: 5,
     marginBottom: 25,
     //  marginHorizontal: width > 390 ? "22%" : 0,
-    width: width < 890 ? 360 : 440,
+    width: 330,
     alignItems: "center",
   },
   videoName: {

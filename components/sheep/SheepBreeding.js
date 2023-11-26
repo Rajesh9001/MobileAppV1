@@ -51,7 +51,7 @@ const sheepList = [
   {
     id: 8,
     img: require("../../assets/images/sheep9.jpeg"),
-    description: "Hard mating.",
+    description: "Hand mating.",
   },
 ];
 

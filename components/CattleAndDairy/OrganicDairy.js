@@ -75,7 +75,7 @@ export default function OrganicDairy({ navigation }) {
       </Text>
       <FlatList
         data={organicList}
-        numColumns={width > 400 ? 2 : 1}
+        //numColumns={width > 400 ? 2 : 1}
         renderItem={({ item }) => (
           <View style={{ alignItems: "center" }}>
             <View style={styles.imageHeader}>

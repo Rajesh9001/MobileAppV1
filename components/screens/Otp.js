@@ -15,11 +15,16 @@ import firebase from "firebase/compat/app";
 import LoadingOverlay from "../../ui/LoadingOverlay";
 import { useContext } from "react";
 import { Context } from "../../store/Context";
+import { AuthContext } from "../../store/auth-context";
+import { createUserByPhone } from "../../util/auth";
 
 export default function Otp({ navigation }) {
   // const { name, phoneNumber, setName, setPhoneNumber } = useContext(Context);
   const context = useContext(Context);
-
+  const authCtx = useContext(AuthContext);
+    const [phoneNumber, setPhoneNumber] = useState();
+    const [name, setName] = useState();
+    const [mail, setMail]= useState();
   const [code, setCode] = useState();
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [err, setErr] = useState(false);
@@ -27,16 +32,20 @@ export default function Otp({ navigation }) {
   const recaptchaVerifier = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState();
+  const [emailValidError, setEmailValidError] = useState('');
 
-  const sendVerification = () => {
+
+  const sendVerification = async () => {
     // console.log(isNameValid);
     // console.log(context.phoneNumber);
-
+   authCtx.LoginNameSetter(name);
+   authCtx.phoneNumberSetter(phoneNumber);
+   authCtx.mailsetter(mail);
     const phoneProvider = new firebase.auth.PhoneAuthProvider();
 
     try {
-      const isNumValid = phoneValidation(context.phoneNumber);
-      const isNameValid = nameValidation(context.name);
+      const isNumValid = phoneValidation(phoneNumber);
+      const isNameValid = nameValidation(name);
 
       if (!isNameValid) {
         Alert.alert("Please enter valid Name");
@@ -46,14 +55,19 @@ export default function Otp({ navigation }) {
         Alert.alert("Please enter valid number");
         return;
       }
+      // const data = createUserByPhone(phoneNumber);
+      // console.log(data);
+      // authCtx.authenticate(data.idToken);
+
       setIsSubmitting(true);
       setIsSubmitting(false);
       phoneProvider
         .verifyPhoneNumber(
-          `+91${context.phoneNumber}`,
+          `+91${phoneNumber}`,
           recaptchaVerifier.current
         )
         .then(setVerificationId);
+    
     } catch (error) {
       setIsSubmitting(false);
       Alert.alert("Error Encountered");
@@ -91,9 +105,9 @@ export default function Otp({ navigation }) {
       .signInWithCredential(credential)
       .then(() => {
         setCode("");
-        console.log("after setcode " + context.name);
-        context.setCity(context.name);
-        console.log("after setting city" + context.city);
+        // console.log("after setcode " + context.name);
+        // context.setCity(context.name);
+        // console.log("after setting city" + context.city);
         setIsSubmitting(false);
         navigation.replace("Drawer");
 
@@ -113,6 +127,24 @@ export default function Otp({ navigation }) {
   const updatePhoneNumber = (valueEntered) => {
     setPhoneNumber(valueEntered);
   };
+
+
+  const handleValidEmail = val => {
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    
+    if (val.length === 0) {
+      setEmailValidError('email address must be enter');
+    } else if (reg.test(val) === false) {
+      setEmailValidError('enter valid email address');
+    } else if (reg.test(val) === true) {
+      setEmailValidError('');
+    }
+    };
+    
+
+
+
+
   return (
     <ImageBackground
       source={require("../../assets/images/background2.webp")}
@@ -130,9 +162,9 @@ export default function Otp({ navigation }) {
           <TextInput
             placeholder="Name"
             // onChangeText={updateName}
-            value={context.name}
+            value={name}
             onChangeText={(name) => {
-              context.setName(name);
+              setName(name);
             }}
             color="black"
             backgroundColor="white"
@@ -142,9 +174,9 @@ export default function Otp({ navigation }) {
           <TextInput
             placeholder="Enter Phone number"
             // onChangeText={updatePhoneNumber}
-            value={context.phoneNumber}
+            value={phoneNumber}
             onChangeText={(phoneNumber) => {
-              context.setPhoneNumber(phoneNumber);
+              setPhoneNumber(phoneNumber);
             }}
             keyboardType="phone-pad"
             autoCompleteType="tel"
@@ -152,6 +184,17 @@ export default function Otp({ navigation }) {
             backgroundColor="white"
             style={styles.textInput}
           />
+            <TextInput
+    style={styles.input}
+    placeholder="Email"
+    value={mail}
+    autoCorrect={false}
+    autoCapitalize="none"
+    onChangeText={value => {
+      setMail(value);
+      handleValidEmail(value);
+    }}
+  />
           <TouchableOpacity
             style={styles.sendVerification}
             onPress={sendVerification}

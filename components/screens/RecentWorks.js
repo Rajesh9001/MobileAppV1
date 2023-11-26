@@ -97,6 +97,26 @@ function RecentWorks() {
             </View>
           </View>
           <View style={styles.card}>
+            <Text style={styles.cardTitle}>Nellore Sheep</Text>
+            <View style={styles.cardPicContainer}>
+              <Image
+                style={styles.cardPic}
+                source={require("../../assets/images/recent13.jpg")}
+                resizeMode="stretch"
+              />
+            </View>
+          </View>
+          <View style={styles.card}>
+            <Text style={styles.cardTitle}>Punganur Cattle</Text>
+            <View style={styles.cardPicContainer}>
+              <Image
+                style={styles.cardPic}
+                source={require("../../assets/images/recent14.jpg")}
+                resizeMode="stretch"
+              />
+            </View>
+          </View>
+          <View style={styles.card}>
             <Text style={styles.cardTitle}>Sahiwal cattle</Text>
             <View style={styles.cardPicContainer}>
               <Image

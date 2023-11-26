@@ -73,7 +73,7 @@ export default function HeatDetection({ navigation }) {
       </Text>
       <FlatList
         data={HeatList}
-        numColumns={width > 400 ? 2 : 1}
+        //numColumns={width > 400 ? 2 : 1}
         renderItem={({ item }) => (
           <View style={{ alignItems: "center" }}>
             <View style={styles.imageHeader}>

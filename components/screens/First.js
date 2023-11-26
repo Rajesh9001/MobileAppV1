@@ -11,7 +11,7 @@ import {
   View,
 } from "react-native";
 
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import {
   PlayfairDisplay_400Regular,
   PlayfairDisplay_400Regular_Italic,
@@ -31,8 +31,12 @@ import * as SplashScreen from "expo-splash-screen";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 
+import LoginScreen from "../../loginCred/LoginScreen";
+import { AuthContext } from "../../store/auth-context";
+
 function First({ navigation }) {
   const [modalIsVisible, setModalIsVisible] = useState(false);
+  const authCtx = useContext(AuthContext);
   let [fontsLoaded] = useFonts({
     PlayfairDisplay_400Regular,
     PlayfairDisplay_500Medium,
@@ -54,8 +58,9 @@ function First({ navigation }) {
     }
     prepare();
     setTimeout(() => {
-      navigation.replace("Otp");
-      // navigation.replace("Drawer");
+      // navigation.replace("Otp");
+      navigation.replace("Drawer");
+      // navigation.replace("Login");
     }, 2000);
   }, []);
 
@@ -85,6 +90,9 @@ function First({ navigation }) {
       >
         <SafeAreaView style={styles.rootScreen}>
           <View style={styles.container}>
+            <Text style={[styles.title, { fontSize: 18 }]}>
+              Welcome {authCtx.otpLoginName}
+            </Text>
             <Text style={styles.heading}>Holistic Animal Farming</Text>
             <Text style={styles.subHeading}>
               Aiming Nutritional Security of the farmers

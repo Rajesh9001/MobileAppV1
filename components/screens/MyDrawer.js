@@ -1,13 +1,14 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
-  AntDesign,
   Entypo,
   FontAwesome5,
   Foundation,
   Ionicons,
   Octicons,
 } from "@expo/vector-icons";
-import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { useContext } from "react";
+import { Alert } from "react-native";
 
 import AboutUs from "../AboutUs";
 import Animals from "../Animals";
@@ -15,7 +16,6 @@ import RecentWorks from "./RecentWorks";
 import Publication from "../Publication";
 import ResearchAreas from "../ResearchAreas";
 import Teaching from "../Teaching.js";
-import Download from "./Download";
 import Extention from "./Extention";
 import Byproducts from "./Byproducts";
 import Technologies from "../Technologies.js";
@@ -23,9 +23,12 @@ import IndianHeritage from "./IndianHeritage";
 import FarmerHelpDesk from "../FarmerHelpDesk";
 import Contact from "../Contact";
 import FeedBack from "../FeedBack";
+import Profile from "../Profile";
 import Home from "./Welcome";
-import User from "../User";
+
+import IconButton from "../uiCred/IconButton";
 import { ContextProvider } from "../../store/Context";
+import { AuthContext } from "../../store/auth-context";
 
 const Drawer = createDrawerNavigator();
 const ScreensArray = [
@@ -43,6 +46,24 @@ const ScreensArray = [
   },
 ];
 function MyDrawer() {
+  const authCtx = useContext(AuthContext);
+
+  function handleLogOut() {
+    Alert.alert(
+      "Logout",
+      "Are you sure want to log out?",
+      [
+        {
+          text: "No",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { text: "Yes", onPress: () => authCtx.logout() },
+      ],
+      { cancelable: false }
+    );
+  }
+
   return (
     <ContextProvider>
       <Drawer.Navigator
@@ -80,6 +101,14 @@ function MyDrawer() {
             drawerIcon: ({ color, size }) => (
               <Ionicons name="home" color={color} size={18}></Ionicons>
             ),
+            headerRight: ({ tintColor }) => (
+              <IconButton
+                icon="exit"
+                color={tintColor}
+                size={24}
+                onPress={handleLogOut}
+              />
+            ),
           }}
         />
         {/* <Drawer.Screen
@@ -95,7 +124,7 @@ function MyDrawer() {
           name="AboutUs"
           component={AboutUs}
           options={{
-            title: "Profile",
+            title: "About Us",
             headerStyle: { backgroundColor: "#155c28" },
             sceneContainerStyle: { backgroundColor: "#ebdede" },
             drawerIcon: ({ color, size }) => (
@@ -245,19 +274,23 @@ function MyDrawer() {
             drawerActiveTintColor: "#351401",
           }}
         />
-        {/* <Drawer.Screen
-          name="Download"
-          component={Download}
+        <Drawer.Screen
+          name="Profile"
+          component={Profile}
           options={{
             drawerIcon: ({ color, size }) => (
-              <Entypo name="phone" size={22} color={color} />
+              <Ionicons
+                name="person-circle-sharp"
+                color={color}
+                size={24}
+              ></Ionicons>
             ),
-            headerStyle: { backgroundColor: "#fff" },
-            headerTintColor: "black",
-            title: "Contact Us",
+            headerStyle: { backgroundColor: "#rgba(114, 146, 209, 0.6)" },
+            headerTintColor: "#351401",
+            title: "Profile",
             drawerActiveTintColor: "#351401",
           }}
-        /> */}
+        />
       </Drawer.Navigator>
     </ContextProvider>
   );
