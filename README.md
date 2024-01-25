@@ -1,6 +1,6 @@
 # MobileApp
 
-Creating a Farmer App involves addressing the specific needs and challenges faced 
+Creating a FarmVet App involves addressing the specific needs and challenges faced 
 by farmers. Provide information on government agricultural schemes, subsidies, and 
 policies. Allow farmers to log and monitor the feed consumption of their animals. 
 Several features and functionalities that could be incorporated into a Farmer App to 
