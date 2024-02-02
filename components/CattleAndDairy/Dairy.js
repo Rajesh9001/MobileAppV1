@@ -68,14 +68,13 @@ export default function Dairy({ navigation }) {
           </View>
           <View style={styles.videoContainer}>
             <View style={styles.videoHeader}>
-              <Text style={styles.videoName}>Dairy Project (Cost)</Text>
+              <Text style={styles.videoName}>TMR feeding</Text>
             </View>
-
             <YoutubePlayer
               height={210}
               width={300}
               play={playing}
-              videoId={"CWSzCapfdQ4"}
+              videoId={"yB67QrQN9Ns"}
               onChangeState={onStateChange}
             />
           </View>
@@ -129,18 +128,7 @@ export default function Dairy({ navigation }) {
               onChangeState={onStateChange}
             />
           </View>
-          <View style={styles.videoContainer}>
-            <View style={styles.videoHeader}>
-              <Text style={styles.videoName}>TMR feeding</Text>
-            </View>
-            <YoutubePlayer
-              height={210}
-              width={300}
-              play={playing}
-              videoId={"yB67QrQN9Ns"}
-              onChangeState={onStateChange}
-            />
-          </View>
+
           <View style={styles.videoContainer}>
             <View style={styles.videoHeader}>
               <Text style={styles.videoName}>Organic Farming</Text>
